@@ -26,22 +26,15 @@ class TodoController {
         res.json(err);
       });
   }
-  static findById(req, res) {
-    let id = +req.params.id;
-    todo
-      .findByPk(id)
-      .then((result) => {
+  static findById(req,res){
+    let id = +req.params.id
+    todo.findByPk(id)
+      .then(reslut => {
         if (result !== null) {
-          res.json(result);
-        } else {
-          res.json({
-            message: "Todo not found!",
-          });
+          res.json(result)
+          
         }
       })
-      .catch((err) => {
-        res.json(err);
-      });
   }
 }
 

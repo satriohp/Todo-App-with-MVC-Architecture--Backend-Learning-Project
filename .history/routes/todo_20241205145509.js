@@ -5,6 +5,6 @@ todoRoute.get("/", TodoController.getTodos);
 
 todoRoute.post("/add", TodoController.AddTodos);
 
-todoRoute.get("/find/:id", TodoController.findById);
+todoRoute.get("/find/:id", TodoController.findByID);
 
 module.exports = todoRoute;

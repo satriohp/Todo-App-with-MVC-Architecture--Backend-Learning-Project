@@ -30,7 +30,7 @@ class TodoController {
     let id = +req.params.id;
     todo
       .findByPk(id)
-      .then((result) => {
+      .then(reslut) => {
         if (result !== null) {
           res.json(result);
         } else {

@@ -3,8 +3,8 @@ const TodoController = require("../controllers/TodoController");
 
 todoRoute.get("/", TodoController.getTodos);
 
-todoRoute.post("/add", TodoController.AddTodos);
+todoRoute.get("/add", TodoController.AddTodos);
 
-todoRoute.get("/find/:id", TodoController.findById);
+todoRoute.get()
 
 module.exports = todoRoute;
