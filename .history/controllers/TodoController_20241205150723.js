@@ -43,52 +43,7 @@ class TodoController {
         res.json(err);
       });
   }
-  static deleteTodo(req, res) {
-    let id = +req.params.id;
-
-    todo
-      .destroy({
-        where: {
-          id,
-        },
-      })
-      .then.json((result) => {
-        if (result === 1) {
-          res.json({
-            message: "Todo has been deleted!",
-          });
-        } else {
-          res.json({
-            message: "Todo failed to delete!",
-          });
-        }
-        res.json(result);
-      })
-      .catch((err) => {
-        res.json(err);
-      });
-  }
-  static updateTodo(req, res) {
-    let id = +req.params.idconst;
-    const { task, status } = req.body;
-
-    todo
-      .update(
-        {
-          task,
-          status: Boolean(status),
-        },
-        {
-          where: { id },
-        }
-      )
-      .then((result) => {
-        res.json(result);
-      })
-      .catch((err) => {
-        res.json(err);
-      });
-  }
+  static delete
 }
 
 module.exports = TodoController;

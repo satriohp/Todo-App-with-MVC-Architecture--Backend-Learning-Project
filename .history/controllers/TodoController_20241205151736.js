@@ -68,27 +68,7 @@ class TodoController {
         res.json(err);
       });
   }
-  static updateTodo(req, res) {
-    let id = +req.params.idconst;
-    const { task, status } = req.body;
-
-    todo
-      .update(
-        {
-          task,
-          status: Boolean(status),
-        },
-        {
-          where: { id },
-        }
-      )
-      .then((result) => {
-        res.json(result);
-      })
-      .catch((err) => {
-        res.json(err);
-      });
-  }
+  static updateTodo(req, res) {}
 }
 
 module.exports = TodoController;

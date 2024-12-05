@@ -55,12 +55,12 @@ class TodoController {
       .then.json((result) => {
         if (result === 1) {
           res.json({
-            message: "Todo has been deleted!",
-          });
-        } else {
-          res.json({
-            message: "Todo failed to delete!",
-          });
+            message: "Todo has been deleted!"
+          } eles {
+            res.json({
+              res.json({message:"todo"})
+            })
+          })
         }
         res.json(result);
       })
@@ -68,27 +68,7 @@ class TodoController {
         res.json(err);
       });
   }
-  static updateTodo(req, res) {
-    let id = +req.params.idconst;
-    const { task, status } = req.body;
-
-    todo
-      .update(
-        {
-          task,
-          status: Boolean(status),
-        },
-        {
-          where: { id },
-        }
-      )
-      .then((result) => {
-        res.json(result);
-      })
-      .catch((err) => {
-        res.json(err);
-      });
-  }
+  static updateTodo(req, res) {}
 }
 
 module.exports = TodoController;
